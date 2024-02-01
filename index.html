@@ -3,7 +3,7 @@
     <head>
         <script>
             const sleep = ms => new Promise(r => setTimeout(r, ms));
-            async function sleeper() { await sleep(10000); console.log("Clicked"); }
+            async function sleeper() { await sleep(10000); console.log("Clicked"); document.body.appendChild(document.createElement('button')) }
         </script>
     </head>
     <body>
