@@ -1,16 +1,19 @@
 <!doctype html>
 <html>
     <head>
-
+        <script>
+            const sleep = ms => new Promise(r => setTimeout(r, ms));
+            async function sleeper() { await sleep(10000); console.log("Clicked"); }
+        </script>
     </head>
     <body>
         <p>
-        <span>[foo]</span>
+        <span onclick='sleeper()' >[foo]</span>
         </p>
 
         <p>
-        <a href=#>[#]<a><br>
+        <a onclick='sleeper()' href=#>[#]</a><br>
         </p>
 
-    </body>
+</body>
 </html>
